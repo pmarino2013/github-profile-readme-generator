@@ -1,5 +1,6 @@
 <script setup>
 import CabeceraApp from "./components/CabeceraApp.vue";
+import PreviewApp from "./components/PreviewApp.vue";
 </script>
 
 <template>
@@ -11,6 +12,7 @@ import CabeceraApp from "./components/CabeceraApp.vue";
       </div>
       <div>
         <!-- preview -->
+        <PreviewApp />
         <!-- código  -->
       </div>
     </div>
