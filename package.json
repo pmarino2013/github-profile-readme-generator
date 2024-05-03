@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "md-editor-v3": "^4.13.5",
     "vue": "^3.3.4"
   },
   "devDependencies": {
