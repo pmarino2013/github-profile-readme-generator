@@ -1,9 +1,20 @@
+<script setup>
+import { ref } from "vue";
+import { useDatos } from "../store/useDatos";
+
+import { storeToRefs } from "pinia";
+
+const store = useDatos();
+
+const { contenido } = storeToRefs(store);
+const formValues = ref(contenido);
+</script>
 <template>
   <div class="text-center mt-3">
     <h3 class="font-bold text-3xl">Cabecera</h3>
   </div>
   <div class="max-w-md mx-auto">
-    <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+    <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
       <div class="mb-4">
         <label class="block text-gray-700 text-sm font-bold mb-2" for="titulo">
           Título
@@ -13,6 +24,7 @@
           id="titulo"
           type="text"
           placeholder="Ingrese el título"
+          v-model="formValues.title"
         />
       </div>
       <div class="mb-4">
@@ -26,6 +38,7 @@
           class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           id="subtitulo"
           type="text"
+          v-model="formValues.subtitle"
           placeholder="Ingrese el subtítulo"
         />
       </div>
@@ -37,6 +50,7 @@
           class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           id="acerca"
           placeholder="Ingrese información sobre usted"
+          v-model="formValues.about"
         ></textarea>
       </div>
       <div class="mb-4">
@@ -50,6 +64,7 @@
           class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           id="habilidades"
           type="text"
+          v-model="formValues.skills"
           placeholder="Ingrese sus habilidades"
         />
       </div>
@@ -60,20 +75,12 @@
         <input
           class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           id="url"
+          v-model="formValues.url"
           type="text"
           placeholder="Ingrese su URL"
         />
       </div>
-      <div class="flex items-center justify-between">
-        <button
-          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-          type="button"
-        >
-          Enviar
-        </button>
-      </div>
-    </div>
+    </form>
   </div>
 </template>
-<script setup></script>
 <style scope></style>
