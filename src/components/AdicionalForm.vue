@@ -24,7 +24,7 @@ const formValues = ref(adicionales);
           class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           id="titulo"
           type="text"
-          placeholder="Ingrese el título"
+          placeholder="Introduce los detalles..."
           v-model="formValues.trabajando"
         />
       </div>
@@ -36,7 +36,7 @@ const formValues = ref(adicionales);
           class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           id="titulo"
           type="text"
-          placeholder="Ingrese el título"
+          placeholder="Introduce los detalles..."
           v-model="formValues.colaborar"
         />
       </div>
@@ -48,7 +48,7 @@ const formValues = ref(adicionales);
           class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           id="titulo"
           type="text"
-          placeholder="Ingrese el título"
+          placeholder="Introduce los detalles..."
           v-model="formValues.pregunta"
         />
       </div>
@@ -60,7 +60,7 @@ const formValues = ref(adicionales);
           class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           id="titulo"
           type="text"
-          placeholder="Ingrese el título"
+          placeholder="Introduce los detalles..."
           v-model="formValues.pronombre"
         />
       </div>
@@ -75,7 +75,7 @@ const formValues = ref(adicionales);
           class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           id="titulo"
           type="text"
-          placeholder="Ingrese el título"
+          placeholder="Introduce los detalles..."
           v-model="formValues.aprendiendo"
         />
       </div>
@@ -87,7 +87,7 @@ const formValues = ref(adicionales);
           class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           id="titulo"
           type="text"
-          placeholder="Ingrese el título"
+          placeholder="Introduce los detalles..."
           v-model="formValues.ayuda"
         />
       </div>
@@ -99,7 +99,7 @@ const formValues = ref(adicionales);
           class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           id="titulo"
           type="text"
-          placeholder="Ingrese el título"
+          placeholder="Introduce los detalles..."
           v-model="formValues.contacto"
         />
       </div>
@@ -111,7 +111,7 @@ const formValues = ref(adicionales);
           class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           id="titulo"
           type="text"
-          placeholder="Ingrese el título"
+          placeholder="Introduce los detalles..."
           v-model="formValues.curioso"
         />
       </div>
