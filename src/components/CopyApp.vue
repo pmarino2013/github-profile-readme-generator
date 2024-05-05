@@ -10,8 +10,9 @@ const copiado = ref(false);
 const message = ref("");
 
 const copiarDatos = () => {
+  const texto = props.estructura + props.datosAdicionales;
   navigator.clipboard
-    .writeText(props.estructura, props.datosAdicionales)
+    .writeText(texto)
     .then(() => {
       console.log("Texto copiado al portapapeles:", props.estructura);
       message.value =
