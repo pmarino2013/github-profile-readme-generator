@@ -42,29 +42,23 @@ watch(
   () => store.adicionales,
   (newState, oldState) => {
     datosAdicionales.value = `
-  ${
-    newState.trabajando &&
-    "<li>🔭Estoy trabajando en " + newState.trabajando + "</li>"
-  }
-  ${
-    newState.aprendiendo &&
-    "<li>🌱 Estoy aprendiendo " + newState.aprendiendo + "</li>"
-  }
-  ${
-    newState.colaborar &&
-    "<li>👯 Quiero colaborar con " + newState.colaborar + "</li>"
-  }
-  ${newState.ayuda && "<li>🤔 Necesito ayuda con " + newState.ayuda + "</li>"}
-  ${
-    newState.pregunta &&
-    "<li>💬 Preguntame acerca de " + newState.pregunta + "</li>"
-  } 
-  ${
-    newState.contacto &&
-    "<li>📭 Cómo contactarme: " + newState.contacto + "</li>"
-  }
-  ${newState.pronombre && "<li>😄 Pronombres: " + newState.pronombre + "</li>"}
-  ${newState.curioso && "<li>⚡ Dato curioso: " + newState.curioso + "</li>"}
+    \n${
+      newState.trabajando &&
+      "- 🛠️ Estoy trabajando en " + newState.trabajando + "\n"
+    }${
+      newState.aprendiendo &&
+      "- 📖 Estoy aprendiendo " + newState.aprendiendo + "\n"
+    }${
+      newState.colaborar &&
+      "- 👯 Quiero colaborar con " + newState.colaborar + "\n"
+    }${newState.ayuda && "- 🤔 Necesito ayuda con " + newState.ayuda + "\n"}${
+      newState.pregunta &&
+      "- 💬 Preguntame acerca de " + newState.pregunta + "\n"
+    }${
+      newState.contacto && "- 📭 Cómo contactarme: " + newState.contacto + "\n"
+    }${newState.pronombre && "- 😄 Pronombres: " + newState.pronombre + "\n"}${
+      newState.curioso && "- ⚡ Dato curioso: " + newState.curioso + "\n"
+    }
   `;
   },
   { deep: true }
