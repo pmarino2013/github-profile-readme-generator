@@ -10,9 +10,20 @@ export const useDatos = defineStore("datos", () => {
     url: "https://i.pinimg.com/736x/d2/dc/d4/d2dcd4e515f401cc834e6ae5ba0dbd1a.jpg",
   });
 
+  const adicionales = ref({
+    trabajando: "",
+    colaborar: "",
+    pregunta: "",
+    pronombre: "",
+    aprendiendo: "",
+    ayuda: "",
+    contacto: "",
+    curioso: "",
+  });
+
   const agregarDatos = (objeto) => {
     contenido.value = objeto;
   };
 
-  return { contenido, agregarDatos };
+  return { contenido, agregarDatos, adicionales };
 });

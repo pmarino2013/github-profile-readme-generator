@@ -18,9 +18,9 @@ ${store.contenido.about}
 
 Skills: ${store.contenido.skills}
 
-- 🔭 I’m currently working on this page. 
-
 `);
+
+const datosAdicionales = ref("");
 
 watch(
   () => store.contenido,
@@ -33,9 +33,39 @@ ${newState.about}
 
 Skills: ${newState.skills}
 
-- 🔭 I’m currently working on this page. 
-
 `;
+  },
+  { deep: true }
+);
+
+watch(
+  () => store.adicionales,
+  (newState, oldState) => {
+    datosAdicionales.value = `
+  ${
+    newState.trabajando &&
+    "<li>🔭Estoy trabajando en " + newState.trabajando + "</li>"
+  }
+  ${
+    newState.aprendiendo &&
+    "<li>🌱 Estoy aprendiendo " + newState.aprendiendo + "</li>"
+  }
+  ${
+    newState.colaborar &&
+    "<li>👯 Quiero colaborar con " + newState.colaborar + "</li>"
+  }
+  ${newState.ayuda && "<li>🤔 Necesito ayuda con " + newState.ayuda + "</li>"}
+  ${
+    newState.pregunta &&
+    "<li>💬 Preguntame acerca de " + newState.pregunta + "</li>"
+  } 
+  ${
+    newState.contacto &&
+    "<li>📭 Cómo contactarme: " + newState.contacto + "</li>"
+  }
+  ${newState.pronombre && "<li>😄 Pronombres: " + newState.pronombre + "</li>"}
+  ${newState.curioso && "<li>⚡ Dato curioso: " + newState.curioso + "</li>"}
+  `;
   },
   { deep: true }
 );
@@ -48,9 +78,10 @@ Skills: ${newState.skills}
   </div>
 
   <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-    <!-- <textarea v-model="content" cols="30"> </textarea> -->
+    <!-- <textarea v-model="content" cols="30"> </textarea>   -->
     <MdPreview :modelValue="estructura" />
+    <MdPreview :modelValue="datosAdicionales" />
   </div>
-  <CopyApp :estructura="estructura" />
+  <CopyApp :estructura="estructura" :datosAdicionales="datosAdicionales" />
 </template>
 <style scope></style>

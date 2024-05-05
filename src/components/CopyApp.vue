@@ -1,6 +1,7 @@
 <script setup>
 const props = defineProps({
   estructura: String,
+  datosAdicionales: String,
 });
 import { ref } from "vue";
 import AlertMessage from "./AlertMessage.vue";
@@ -10,7 +11,7 @@ const message = ref("");
 
 const copiarDatos = () => {
   navigator.clipboard
-    .writeText(props.estructura)
+    .writeText(props.estructura, props.datosAdicionales)
     .then(() => {
       console.log("Texto copiado al portapapeles:", props.estructura);
       message.value =
@@ -49,7 +50,7 @@ const copiarDatos = () => {
     <textarea
       class="resize border rounded-md p-2 w-full h-32 focus:outline-none focus:ring focus:border-blue-500 text-slate-500"
       readonly
-      >{{ estructura }}</textarea
+      >{{ estructura }}{{ datosAdicionales }}</textarea
     >
   </div>
 </template>
